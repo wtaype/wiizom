@@ -29,8 +29,9 @@ jobs:
 
       - run: npm ci
 
-      - name: 🏗️ Build for GitHub Pages
-        run: npm run build -- --base=$BASE_URL
+      - name: 🏗️ Re-build for Firebase
+        if: env.IS_TAG == 'false'
+        run: npm run build -- --base=/
         env:
           VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
           VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}
@@ -38,6 +39,12 @@ jobs:
           VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
           VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
           VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
+
+      - name: 🔥 Deploy to Firebase
+        if: env.IS_TAG == 'false'
+        run: |
+          npm install -g firebase-tools@latest
+          firebase deploy --only hosting --project ${{ secrets.FIREBASE_PROJECT_ID }} --token "${{ secrets.FIREBASE_TOKEN }}"
 
       - name: 🐙 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

@@ -3,7 +3,7 @@ import $ from 'jquery';
 import { savels, getls } from './widev.js';
 
 // INFORMACIÓN DEL APP 
-export let app = 'Wiimp3'
+export let app = 'Wiizom'
 export let lanzamiento = 2024;
 export let autor = '@wilder.taype';
 export let link = 'https://wtaype.github.io/';

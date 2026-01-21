@@ -1,7 +1,9 @@
 import './beneficios.css';
-import $ from 'jquery';
+import jQuery from 'jquery';
 import { app, version } from '../wii.js';
 import { abrirModal, cerrarModal } from '../widev.js';
+
+const $ = jQuery;
 
 export const render = () => `
   <div class="beneficios_container">
@@ -19,33 +21,33 @@ export const render = () => `
       <div class="benefit_card premium">
         <div class="benefit_ribbon">Popular</div>
         <div class="benefit_icon">
-          <i class="fas fa-bolt"></i>
+          <i class="fas fa-eye"></i>
         </div>
-        <h3>Conversión Ultrarrápida</h3>
-        <p>Procesa tus videos en segundos gracias a nuestra tecnología optimizada con FFmpeg 6.0</p>
+        <h3>OCR Inteligente</h3>
+        <p>Extrae texto de imágenes con precisión gracias a Tesseract.js optimizado</p>
         <ul class="benefit_features">
-          <li><i class="fas fa-check"></i> Hasta 3x más rápido</li>
-          <li><i class="fas fa-check"></i> Sin límite de tamaño</li>
-          <li><i class="fas fa-check"></i> Procesamiento paralelo</li>
+          <li><i class="fas fa-check"></i> Multilenguaje (ES+EN)</li>
+          <li><i class="fas fa-check"></i> Alta precisión</li>
+          <li><i class="fas fa-check"></i> Drag & Drop</li>
         </ul>
-        <button class="benefit_btn" data-modal="modalRapido">
+        <button class="benefit_btn" data-modal="modalOCR">
           <i class="fas fa-play"></i> Ver demo
         </button>
       </div>
 
       <div class="benefit_card">
         <div class="benefit_icon">
-          <i class="fas fa-gem"></i>
+          <i class="fas fa-calculator"></i>
         </div>
-        <h3>Calidad Profesional</h3>
-        <p>Audio de alta fidelidad con bitrates personalizables de 128k hasta 320k</p>
+        <h3>Cuadre Automático</h3>
+        <p>Sistema dual de sumas inteligentes con detección automática de formato</p>
         <ul class="benefit_features">
-          <li><i class="fas fa-check"></i> Hasta 320 kbps</li>
-          <li><i class="fas fa-check"></i> Sin pérdida de calidad</li>
-          <li><i class="fas fa-check"></i> Múltiples formatos</li>
+          <li><i class="fas fa-check"></i> Dos columnas simultáneas</li>
+          <li><i class="fas fa-check"></i> Auto-detección de formato</li>
+          <li><i class="fas fa-check"></i> Total general en tiempo real</li>
         </ul>
-        <button class="benefit_btn" data-modal="modalCalidad">
-          <i class="fas fa-chart-line"></i> Comparar
+        <button class="benefit_btn" data-modal="modalCuadre">
+          <i class="fas fa-table"></i> Conocer más
         </button>
       </div>
 
@@ -54,11 +56,11 @@ export const render = () => `
           <i class="fas fa-shield-alt"></i>
         </div>
         <h3>Privacidad Total</h3>
-        <p>Tus archivos nunca se almacenan en nuestros servidores. Conversión local y segura</p>
+        <p>Tus datos se procesan localmente. Sin servidores externos ni rastreo</p>
         <ul class="benefit_features">
           <li><i class="fas fa-check"></i> Procesamiento local</li>
           <li><i class="fas fa-check"></i> Sin registro de datos</li>
-          <li><i class="fas fa-check"></i> Eliminación automática</li>
+          <li><i class="fas fa-check"></i> LocalStorage seguro</li>
         </ul>
         <button class="benefit_btn" data-modal="modalSeguridad">
           <i class="fas fa-lock"></i> Saber más
@@ -67,17 +69,17 @@ export const render = () => `
 
       <div class="benefit_card">
         <div class="benefit_icon">
-          <i class="fas fa-magic"></i>
+          <i class="fas fa-paint-brush"></i>
         </div>
-        <h3>Interfaz Intuitiva</h3>
-        <p>Diseño moderno y fácil de usar. Arrastra, suelta y convierte en 3 simples pasos</p>
+        <h3>Diseño Moderno</h3>
+        <p>5 temas visuales con transiciones suaves y animaciones profesionales</p>
         <ul class="benefit_features">
-          <li><i class="fas fa-check"></i> Drag & Drop</li>
-          <li><i class="fas fa-check"></i> Sin complicaciones</li>
-          <li><i class="fas fa-check"></i> Indicador en tiempo real</li>
+          <li><i class="fas fa-check"></i> 5 temas integrados</li>
+          <li><i class="fas fa-check"></i> Diseño responsive</li>
+          <li><i class="fas fa-check"></i> Animaciones fluidas</li>
         </ul>
-        <button class="benefit_btn" data-modal="modalFacil">
-          <i class="fas fa-book"></i> Guía rápida
+        <button class="benefit_btn" data-modal="modalTemas">
+          <i class="fas fa-palette"></i> Ver temas
         </button>
       </div>
 
@@ -86,11 +88,11 @@ export const render = () => `
           <i class="fas fa-globe"></i>
         </div>
         <h3>Multiplataforma</h3>
-        <p>Funciona perfectamente en Windows, Mac, Linux, Android e iOS</p>
+        <p>Funciona en todos los navegadores modernos sin instalación</p>
         <ul class="benefit_features">
-          <li><i class="fas fa-check"></i> Cross-platform</li>
-          <li><i class="fas fa-check"></i> Sin instalación</li>
-          <li><i class="fas fa-check"></i> PWA compatible</li>
+          <li><i class="fas fa-check"></i> Chrome, Firefox, Edge</li>
+          <li><i class="fas fa-check"></i> Mobile & Desktop</li>
+          <li><i class="fas fa-check"></i> PWA ready</li>
         </ul>
         <button class="benefit_btn" data-modal="modalPlatform">
           <i class="fas fa-desktop"></i> Compatibilidad
@@ -102,12 +104,12 @@ export const render = () => `
         <div class="benefit_icon">
           <i class="fas fa-infinity"></i>
         </div>
-        <h3>Conversiones Ilimitadas</h3>
+        <h3>Uso Ilimitado</h3>
         <p>Sin restricciones, sin anuncios molestos, sin costos ocultos. 100% gratis</p>
         <ul class="benefit_features">
           <li><i class="fas fa-check"></i> Sin límites diarios</li>
           <li><i class="fas fa-check"></i> Sin publicidad</li>
-          <li><i class="fas fa-check"></i> Sin suscripciones</li>
+          <li><i class="fas fa-check"></i> Código abierto</li>
         </ul>
         <button class="benefit_btn" data-modal="modalGratis">
           <i class="fas fa-gift"></i> Comenzar ahora
@@ -131,24 +133,24 @@ export const render = () => `
             </thead>
             <tbody>
               <tr>
-                <td>Velocidad de conversión</td>
-                <td class="highlight"><i class="fas fa-bolt"></i> Ultra rápida</td>
-                <td><i class="fas fa-minus"></i> Lenta</td>
+                <td>Procesamiento OCR</td>
+                <td class="highlight"><i class="fas fa-bolt"></i> Local & Rápido</td>
+                <td><i class="fas fa-cloud"></i> En servidor</td>
               </tr>
               <tr>
-                <td>Calidad máxima</td>
-                <td class="highlight"><i class="fas fa-check"></i> 320 kbps</td>
-                <td><i class="fas fa-times"></i> 192 kbps</td>
-              </tr>
-              <tr>
-                <td>Límite de archivos</td>
-                <td class="highlight"><i class="fas fa-infinity"></i> Ilimitado</td>
-                <td><i class="fas fa-times"></i> 5-10 por día</td>
+                <td>Cuadre de cuentas</td>
+                <td class="highlight"><i class="fas fa-check"></i> Dual automático</td>
+                <td><i class="fas fa-times"></i> Manual simple</td>
               </tr>
               <tr>
                 <td>Privacidad</td>
                 <td class="highlight"><i class="fas fa-shield-check"></i> Total</td>
                 <td><i class="fas fa-exclamation-triangle"></i> Dudosa</td>
+              </tr>
+              <tr>
+                <td>Temas visuales</td>
+                <td class="highlight"><i class="fas fa-palette"></i> 5 temas</td>
+                <td><i class="fas fa-minus"></i> 1-2 temas</td>
               </tr>
               <tr>
                 <td>Publicidad</td>
@@ -157,7 +159,7 @@ export const render = () => `
               </tr>
               <tr>
                 <td>Costo</td>
-                <td class="highlight"><i class="fas fa-gift"></i> Gratis </td>
+                <td class="highlight"><i class="fas fa-gift"></i> Gratis</td>
                 <td><i class="fas fa-dollar-sign"></i> Premium</td>
               </tr>
             </tbody>
@@ -175,22 +177,22 @@ export const render = () => `
           <div class="stat_icon">
             <i class="fas fa-users"></i>
           </div>
-          <div class="stat_number" data-count="10000">0</div>
+          <div class="stat_number" data-count="5000">0</div>
           <div class="stat_label">Usuarios Activos</div>
         </div>
         <div class="stat_card">
           <div class="stat_icon">
-            <i class="fas fa-download"></i>
+            <i class="fas fa-image"></i>
           </div>
-          <div class="stat_number" data-count="50000">0</div>
-          <div class="stat_label">Conversiones Exitosas</div>
+          <div class="stat_number" data-count="25000">0</div>
+          <div class="stat_label">Imágenes Procesadas</div>
         </div>
         <div class="stat_card">
           <div class="stat_icon">
-            <i class="fas fa-clock"></i>
+            <i class="fas fa-calculator"></i>
           </div>
-          <div class="stat_number" data-count="1200">0</div>
-          <div class="stat_label">Horas Ahorradas</div>
+          <div class="stat_number" data-count="15000">0</div>
+          <div class="stat_label">Cuadres Realizados</div>
         </div>
         <div class="stat_card">
           <div class="stat_icon">
@@ -214,77 +216,94 @@ export const render = () => `
   </div>
 
   <!-- MODALES -->
-  <div id="modalRapido" class="wiModal">
+  <div id="modalOCR" class="wiModal">
     <div class="modalBody" style="background:var(--wb)">
-      <button class="modalX" onclick="cerrarModal('modalRapido')"><i class="fas fa-times"></i></button>
-      <div style="padding:3vh 2vw;text-align:center">
-        <i class="fas fa-bolt" style="font-size:4rem;color:var(--mco);margin-bottom:2vh"></i>
-        <h2 style="color:var(--tx);margin-bottom:2vh">Conversión Ultrarrápida</h2>
-        <p style="color:var(--tx);line-height:1.8">Nuestra tecnología optimizada con FFmpeg 6.0 permite procesar videos en tiempo récord. Sin importar el tamaño del archivo, ${app} mantiene velocidades consistentes gracias al procesamiento paralelo avanzado.</p>
+      <button class="modalX"><i class="fas fa-times"></i></button>
+      <div style="padding:3vh 2vw;text-align:center;font-family:var(--ff_P)">
+        <i class="fas fa-eye" style="font-size:4rem;color:var(--mco);margin-bottom:2vh"></i>
+        <h2 style="color:var(--tx);margin-bottom:2vh;font-family:var(--ff_P)">OCR Inteligente</h2>
+        <p style="color:var(--tx);line-height:1.8">Nuestra tecnología OCR utiliza Tesseract.js con soporte para español e inglés. Arrastra imágenes, pega con Ctrl+V o haz doble clic para seleccionar archivos. El texto se extrae automáticamente con alta precisión.</p>
       </div>
     </div>
   </div>
 
-  <div id="modalCalidad" class="wiModal">
+  <div id="modalCuadre" class="wiModal">
     <div class="modalBody" style="background:var(--wb)">
-      <button class="modalX" onclick="cerrarModal('modalCalidad')"><i class="fas fa-times"></i></button>
-      <div style="padding:3vh 2vw;text-align:center">
-        <i class="fas fa-gem" style="font-size:4rem;color:var(--mco);margin-bottom:2vh"></i>
-        <h2 style="color:var(--tx);margin-bottom:2vh">Calidad Profesional</h2>
-        <p style="color:var(--tx);line-height:1.8">Ofrecemos hasta 320 kbps de bitrate, la máxima calidad disponible para MP3. Perfecto para audiófilos y profesionales que no aceptan compromisos en la calidad del audio.</p>
+      <button class="modalX"><i class="fas fa-times"></i></button>
+      <div style="padding:3vh 2vw;text-align:center;font-family:var(--ff_P)">
+        <i class="fas fa-calculator" style="font-size:4rem;color:var(--mco);margin-bottom:2vh"></i>
+        <h2 style="color:var(--tx);margin-bottom:2vh;font-family:var(--ff_P)">Cuadre Automático</h2>
+        <p style="color:var(--tx);line-height:1.8">Sistema dual que permite trabajar con dos columnas simultáneas. Detecta automáticamente formatos separados por |, tab o números al final. Calcula totales en tiempo real y muestra un total general animado.</p>
       </div>
     </div>
   </div>
 
   <div id="modalSeguridad" class="wiModal">
     <div class="modalBody" style="background:var(--wb)">
-      <button class="modalX" onclick="cerrarModal('modalSeguridad')"><i class="fas fa-times"></i></button>
-      <div style="padding:3vh 2vw;text-align:center">
+      <button class="modalX"><i class="fas fa-times"></i></button>
+      <div style="padding:3vh 2vw;text-align:center;font-family:var(--ff_P)">
         <i class="fas fa-shield-alt" style="font-size:4rem;color:var(--mco);margin-bottom:2vh"></i>
-        <h2 style="color:var(--tx);margin-bottom:2vh">Privacidad Total</h2>
-        <p style="color:var(--tx);line-height:1.8">Tus archivos se procesan localmente y se eliminan automáticamente después de la conversión. No almacenamos, rastreamos ni compartimos ningún dato. Tu privacidad es nuestra prioridad.</p>
+        <h2 style="color:var(--tx);margin-bottom:2vh;font-family:var(--ff_P)">Privacidad Total</h2>
+        <p style="color:var(--tx);line-height:1.8">Todo el procesamiento se realiza en tu navegador. No almacenamos, rastreamos ni compartimos ningún dato. Tus archivos y cálculos permanecen en tu dispositivo usando localStorage con expiración automática.</p>
       </div>
     </div>
   </div>
 
-  <div id="modalFacil" class="wiModal">
+  <div id="modalTemas" class="wiModal">
     <div class="modalBody" style="background:var(--wb)">
-      <button class="modalX" onclick="cerrarModal('modalFacil')"><i class="fas fa-times"></i></button>
-      <div style="padding:3vh 2vw;text-align:center">
-        <i class="fas fa-magic" style="font-size:4rem;color:var(--mco);margin-bottom:2vh"></i>
-        <h2 style="color:var(--tx);margin-bottom:2vh">Guía Rápida</h2>
-        <ol style="color:var(--tx);text-align:left;line-height:2;padding-left:2vw">
-          <li><strong>Arrastra</strong> tu video a la zona de carga</li>
-          <li><strong>Selecciona</strong> la calidad deseada (128k-320k)</li>
-          <li><strong>Haz clic</strong> en convertir y ¡listo!</li>
-        </ol>
+      <button class="modalX"><i class="fas fa-times"></i></button>
+      <div style="padding:3vh 2vw;text-align:center;font-family:var(--ff_P)">
+        <i class="fas fa-paint-brush" style="font-size:4rem;color:var(--mco);margin-bottom:2vh"></i>
+        <h2 style="color:var(--tx);margin-bottom:2vh;font-family:var(--ff_P)">5 Temas Visuales</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:2vh;margin-top:2vh">
+          <div style="padding:1.5vh;background:var(--bg1);border-radius:8px">
+            <div style="width:4vh;height:4vh;background:#0EBEFF;border-radius:50%;margin:0 auto 1vh"></div>
+            <p style="color:var(--tx);font-size:var(--fz_m1)">Cielo</p>
+          </div>
+          <div style="padding:1.5vh;background:var(--bg1);border-radius:8px">
+            <div style="width:4vh;height:4vh;background:#FF5C69;border-radius:50%;margin:0 auto 1vh"></div>
+            <p style="color:var(--tx);font-size:var(--fz_m1)">Dulce</p>
+          </div>
+          <div style="padding:1.5vh;background:var(--bg1);border-radius:8px">
+            <div style="width:4vh;height:4vh;background:#29C72E;border-radius:50%;margin:0 auto 1vh"></div>
+            <p style="color:var(--tx);font-size:var(--fz_m1)">Paz</p>
+          </div>
+          <div style="padding:1.5vh;background:var(--bg1);border-radius:8px">
+            <div style="width:4vh;height:4vh;background:#7000FF;border-radius:50%;margin:0 auto 1vh"></div>
+            <p style="color:var(--tx);font-size:var(--fz_m1)">Mora</p>
+          </div>
+          <div style="padding:1.5vh;background:var(--bg1);border-radius:8px">
+            <div style="width:4vh;height:4vh;background:#21273B;border-radius:50%;margin:0 auto 1vh"></div>
+            <p style="color:var(--tx);font-size:var(--fz_m1)">Futuro</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <div id="modalPlatform" class="wiModal">
     <div class="modalBody" style="background:var(--wb)">
-      <button class="modalX" onclick="cerrarModal('modalPlatform')"><i class="fas fa-times"></i></button>
-      <div style="padding:3vh 2vw;text-align:center">
+      <button class="modalX"><i class="fas fa-times"></i></button>
+      <div style="padding:3vh 2vw;text-align:center;font-family:var(--ff_P)">
         <i class="fas fa-globe" style="font-size:4rem;color:var(--mco);margin-bottom:2vh"></i>
-        <h2 style="color:var(--tx);margin-bottom:2vh">Compatibilidad Total</h2>
-        <p style="color:var(--tx);line-height:1.8;margin-bottom:2vh">Funciona en todos los dispositivos y sistemas operativos:</p>
+        <h2 style="color:var(--tx);margin-bottom:2vh;font-family:var(--ff_P)">Compatibilidad Total</h2>
+        <p style="color:var(--tx);line-height:1.8;margin-bottom:2vh">Funciona en todos los navegadores modernos:</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:2vh">
           <div style="padding:1.5vh;background:var(--bg1);border-radius:8px">
-            <i class="fab fa-windows" style="font-size:2rem;color:var(--mco)"></i>
-            <p style="color:var(--tx);margin-top:1vh">Windows</p>
+            <i class="fab fa-chrome" style="font-size:2rem;color:var(--mco)"></i>
+            <p style="color:var(--tx);margin-top:1vh;font-size:var(--fz_m1)">Chrome</p>
           </div>
           <div style="padding:1.5vh;background:var(--bg1);border-radius:8px">
-            <i class="fab fa-apple" style="font-size:2rem;color:var(--mco)"></i>
-            <p style="color:var(--tx);margin-top:1vh">macOS</p>
+            <i class="fab fa-firefox" style="font-size:2rem;color:var(--mco)"></i>
+            <p style="color:var(--tx);margin-top:1vh;font-size:var(--fz_m1)">Firefox</p>
           </div>
           <div style="padding:1.5vh;background:var(--bg1);border-radius:8px">
-            <i class="fab fa-linux" style="font-size:2rem;color:var(--mco)"></i>
-            <p style="color:var(--tx);margin-top:1vh">Linux</p>
+            <i class="fab fa-edge" style="font-size:2rem;color:var(--mco)"></i>
+            <p style="color:var(--tx);margin-top:1vh;font-size:var(--fz_m1)">Edge</p>
           </div>
           <div style="padding:1.5vh;background:var(--bg1);border-radius:8px">
-            <i class="fab fa-android" style="font-size:2rem;color:var(--mco)"></i>
-            <p style="color:var(--tx);margin-top:1vh">Android</p>
+            <i class="fab fa-safari" style="font-size:2rem;color:var(--mco)"></i>
+            <p style="color:var(--tx);margin-top:1vh;font-size:var(--fz_m1)">Safari</p>
           </div>
         </div>
       </div>
@@ -293,10 +312,10 @@ export const render = () => `
 
   <div id="modalGratis" class="wiModal">
     <div class="modalBody" style="background:var(--wb)">
-      <button class="modalX" onclick="cerrarModal('modalGratis')"><i class="fas fa-times"></i></button>
-      <div style="padding:3vh 2vw;text-align:center">
+      <button class="modalX"><i class="fas fa-times"></i></button>
+      <div style="padding:3vh 2vw;text-align:center;font-family:var(--ff_P)">
         <i class="fas fa-gift" style="font-size:4rem;color:var(--mco);margin-bottom:2vh"></i>
-        <h2 style="color:var(--tx);margin-bottom:2vh">100% Gratis, Siempre</h2>
+        <h2 style="color:var(--tx);margin-bottom:2vh;font-family:var(--ff_P)">100% Gratis, Siempre</h2>
         <p style="color:var(--tx);line-height:1.8">Sin límites artificiales, sin muros de pago, sin anuncios invasivos. Creemos que las herramientas útiles deben ser accesibles para todos. ${app} es y siempre será completamente gratuito.</p>
       </div>
     </div>
@@ -310,45 +329,50 @@ export const init = () => {
     abrirModal(modalId);
   });
 
+  // Cerrar modales con botón X
+  $('.modalX').on('click', function() {
+    $(this).closest('.wiModal').attr('id', (i, id) => (cerrarModal(id), id));
+  });
+
   // Animación de números
-  const animateNumbers = () => {
+  const animarNumeros = () => {
     $('.stat_number').each(function() {
       const $this = $(this);
-      const target = parseInt($this.data('count'));
-      const duration = 2000;
-      const steps = 60;
-      const increment = target / steps;
-      let current = 0;
+      const objetivo = parseInt($this.data('count'));
+      const duracion = 2000;
+      const pasos = 60;
+      const incremento = objetivo / pasos;
+      let actual = 0;
       
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          $this.text(target.toLocaleString());
-          clearInterval(timer);
+      const temporizador = setInterval(() => {
+        actual += incremento;
+        if (actual >= objetivo) {
+          $this.text(objetivo.toLocaleString());
+          clearInterval(temporizador);
         } else {
-          $this.text(Math.floor(current).toLocaleString());
+          $this.text(Math.floor(actual).toLocaleString());
         }
-      }, duration / steps);
+      }, duracion / pasos);
     });
   };
 
   // Intersection Observer para stats
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateNumbers();
-        observer.disconnect();
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+      if (entrada.isIntersecting) {
+        animarNumeros();
+        observador.disconnect();
       }
     });
   }, { threshold: 0.5 });
 
-  const statsSection = document.querySelector('.stats_section');
-  if (statsSection) observer.observe(statsSection);
+  const seccionStats = document.querySelector('.stats_section');
+  if (seccionStats) observador.observe(seccionStats);
 
   console.log(`✅ Beneficios de ${app} ${version} cargados`);
 };
 
 export const cleanup = () => {
-  $('.benefit_btn').off();
+  $('.benefit_btn, .modalX').off();
   console.log('🧹 Beneficios limpiados');
 };

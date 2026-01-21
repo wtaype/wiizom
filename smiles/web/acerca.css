@@ -1,8 +1,10 @@
+/* ==================== CONTENEDOR PRINCIPAL ==================== */
 .acerca_container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 2vh 2vw;
   animation: fadeIn 0.4s ease;
+  font-family: var(--ff_P);
 }
 
 @keyframes fadeIn {
@@ -16,7 +18,7 @@
   }
 }
 
-/* ========== HERO SECTION ========== */
+/* ==================== HERO SECTION ==================== */
 .acerca_hero {
   text-align: center;
   padding: 5vh 2vw;
@@ -65,6 +67,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
   z-index: 1;
+  font-family: var(--ff_P);
 }
 
 .hero_badge i {
@@ -119,6 +122,7 @@
   margin-bottom: 3vh;
   position: relative;
   z-index: 1;
+  font-family: var(--ff_P);
 }
 
 .hero_stats {
@@ -142,6 +146,7 @@
   font-weight: 600;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all var(--tr_m);
+  font-family: var(--ff_P);
 }
 
 .stat_item:hover {
@@ -154,7 +159,7 @@
   font-size: var(--fz_l1);
 }
 
-/* ========== SECTIONS ========== */
+/* ==================== SECTIONS ==================== */
 .acerca_section {
   background: var(--wb);
   border-radius: 16px;
@@ -184,6 +189,7 @@
   color: var(--tx);
   line-height: 1.8;
   margin-bottom: 2vh;
+  font-family: var(--ff_P);
 }
 
 .section_content p:last-child {
@@ -195,7 +201,7 @@
   font-weight: 700;
 }
 
-/* ========== FEATURES GRID ========== */
+/* ==================== FEATURES GRID ==================== */
 .features_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -246,9 +252,10 @@
   font-size: var(--fz_m2);
   color: var(--txe);
   line-height: 1.6;
+  font-family: var(--ff_P);
 }
 
-/* ========== TECH GRID ========== */
+/* ==================== TECH GRID ==================== */
 .tech_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -302,6 +309,7 @@
   padding: 1vh 0;
   font-size: var(--fz_m2);
   color: var(--tx);
+  font-family: var(--ff_P);
 }
 
 .tech_list li i {
@@ -309,7 +317,7 @@
   font-size: var(--fz_m3);
 }
 
-/* ========== VERSION TIMELINE ========== */
+/* ==================== VERSION TIMELINE ==================== */
 .version_timeline {
   position: relative;
   padding-left: 4vh;
@@ -346,6 +354,7 @@
   color: var(--tx);
   font-size: var(--fz_s4);
   border: 3px solid var(--wb);
+  font-family: var(--ff_P);
 }
 
 .version_badge.current {
@@ -383,6 +392,7 @@
   font-size: var(--fz_s4);
   color: var(--txe);
   margin-bottom: 1.5vh;
+  font-family: var(--ff_P);
 }
 
 .version_content ul {
@@ -395,9 +405,64 @@
   color: var(--tx);
   margin-bottom: 0.8vh;
   padding-left: 2vh;
+  font-family: var(--ff_P);
 }
 
-/* ========== DEVELOPER CARD ========== */
+/* ==================== PRIVACY SECTION ==================== */
+.privacy_content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5vh;
+}
+
+.privacy_card {
+  background: var(--bg1);
+  padding: 2.5vh 2vw;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all var(--tr_m);
+}
+
+.privacy_card:hover {
+  border-color: var(--mco);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.privacy_icon {
+  width: 70px;
+  height: 70px;
+  background: var(--mco);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2vh;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.privacy_icon i {
+  font-size: var(--fz_l1);
+  color: var(--F);
+}
+
+.privacy_card h3 {
+  font-size: var(--fz_m4);
+  font-weight: 700;
+  color: var(--tx);
+  margin-bottom: 1vh;
+  font-family: var(--ff_P);
+}
+
+.privacy_card p {
+  font-size: var(--fz_m2);
+  color: var(--txe);
+  line-height: 1.6;
+  font-family: var(--ff_P);
+}
+
+/* ==================== DEVELOPER CARD ==================== */
 .developer_card {
   display: flex;
   gap: 3vh;
@@ -444,6 +509,7 @@
   color: var(--mco);
   font-weight: 600;
   margin-bottom: 1.5vh;
+  font-family: var(--ff_P);
 }
 
 .developer_bio {
@@ -451,6 +517,7 @@
   color: var(--tx);
   line-height: 1.7;
   margin-bottom: 2vh;
+  font-family: var(--ff_P);
 }
 
 .developer_links {
@@ -473,6 +540,7 @@
   text-decoration: none;
   cursor: pointer;
   transition: all var(--tr_f);
+  font-family: var(--ff_P);
 }
 
 .dev_link:hover {
@@ -480,7 +548,7 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* ========== FOOTER ========== */
+/* ==================== FOOTER ==================== */
 .acerca_footer {
   background: var(--bg1);
   padding: 3vh 3vw;
@@ -508,12 +576,14 @@
   color: var(--tx);
   max-width: 600px;
   font-weight: 500;
+  font-family: var(--ff_P);
 }
 
 .footer_info p {
   font-size: var(--fz_m2);
   color: var(--txe);
   margin-bottom: 1vh;
+  font-family: var(--ff_P);
 }
 
 .footer_info i {
@@ -538,14 +608,15 @@
   font-weight: 700;
 }
 
-/* ========== RESPONSIVE ========== */
+/* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
   .hero_stats {
     gap: 2vh;
   }
 
   .features_grid,
-  .tech_grid {
+  .tech_grid,
+  .privacy_content {
     grid-template-columns: 1fr;
   }
 
@@ -565,5 +636,24 @@
 
   .version_item {
     padding-left: 2vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero_title {
+    font-size: var(--fz_l2);
+  }
+
+  .section_title {
+    font-size: var(--fz_m5);
+  }
+
+  .developer_links {
+    flex-direction: column;
+  }
+
+  .dev_link {
+    width: 100%;
+    justify-content: center;
   }
 }

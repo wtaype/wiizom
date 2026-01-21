@@ -11,10 +11,10 @@ export const render = () => `
         <span>Versión ${version}</span>
       </div>
       <div class="hero_logo">
-        <i class="fas fa-music"></i>
+        <i class="fas fa-calculator"></i>
       </div>
       <h1 class="hero_title">${app}</h1>
-      <p class="hero_subtitle">La herramienta más poderosa para convertir videos a MP3</p>
+      <p class="hero_subtitle">Herramientas inteligentes de OCR y cuadre de cuentas</p>
       <div class="hero_stats">
         <div class="stat_item">
           <i class="fas fa-calendar-alt"></i>
@@ -22,11 +22,11 @@ export const render = () => `
         </div>
         <div class="stat_item">
           <i class="fas fa-users"></i>
-          <span>+10K Usuarios</span>
+          <span>+5K Usuarios</span>
         </div>
         <div class="stat_item">
-          <i class="fas fa-download"></i>
-          <span>+50K Conversiones</span>
+          <i class="fas fa-image"></i>
+          <span>+25K Imágenes</span>
         </div>
       </div>
     </div>
@@ -36,9 +36,9 @@ export const render = () => `
         <i class="fas fa-info-circle"></i> Acerca de Nosotros
       </h2>
       <div class="section_content">
-        <p><strong>${app}</strong> es una herramienta revolucionaria diseñada para hacer tu vida más fácil. Nació en ${lanzamiento} con una misión clara: <strong>democratizar la conversión de medios</strong> y hacerla accesible para todos.</p>
-        <p>Nuestra plataforma utiliza la tecnología más avanzada de <strong>FFmpeg</strong> para garantizar conversiones de alta calidad, rápidas y eficientes. No importa si eres creador de contenido, músico, estudiante o simplemente alguien que ama la música, ${app} está aquí para ti.</p>
-        <p>Con más de <strong>50,000 conversiones exitosas</strong> y una comunidad en constante crecimiento, nos hemos convertido en la herramienta de confianza para miles de usuarios alrededor del mundo.</p>
+        <p><strong>${app}</strong> es una plataforma innovadora diseñada para simplificar el procesamiento de datos. Nació en ${lanzamiento} con una misión clara: <strong>hacer el trabajo con números más eficiente y accesible</strong> para todos.</p>
+        <p>Utilizamos <strong>Tesseract.js</strong> para reconocimiento óptico de caracteres (OCR) de alta precisión, y algoritmos optimizados para cálculos automáticos. Ya seas contador, emprendedor, estudiante o cualquier profesional que trabaje con datos, ${app} está aquí para facilitar tu vida.</p>
+        <p>Con más de <strong>25,000 imágenes procesadas</strong> y miles de cuadres de cuentas realizados exitosamente, nos hemos convertido en la herramienta de confianza para usuarios que valoran la <strong>privacidad, velocidad y precisión</strong>.</p>
       </div>
     </div>
 
@@ -49,45 +49,45 @@ export const render = () => `
       <div class="features_grid">
         <div class="feature_box">
           <div class="feature_icon">
-            <i class="fas fa-rocket"></i>
+            <i class="fas fa-eye"></i>
           </div>
-          <h3>Ultra Rápido</h3>
-          <p>Conversiones en segundos gracias a nuestra tecnología optimizada</p>
+          <h3>OCR Inteligente</h3>
+          <p>Extrae texto de imágenes con precisión gracias a Tesseract.js optimizado</p>
+        </div>
+        <div class="feature_box">
+          <div class="feature_icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h3>Cuadre Automático</h3>
+          <p>Sistema dual que detecta formatos y calcula totales al instante</p>
         </div>
         <div class="feature_box">
           <div class="feature_icon">
             <i class="fas fa-shield-alt"></i>
           </div>
-          <h3>100% Seguro</h3>
-          <p>Tus archivos son privados y nunca se almacenan en nuestros servidores</p>
+          <h3>100% Privado</h3>
+          <p>Todo el procesamiento es local. Tus datos nunca salen de tu dispositivo</p>
         </div>
         <div class="feature_box">
           <div class="feature_icon">
-            <i class="fas fa-gem"></i>
+            <i class="fas fa-bolt"></i>
           </div>
-          <h3>Alta Calidad</h3>
-          <p>Hasta 320 kbps para audio profesional de estudio</p>
+          <h3>Ultra Rápido</h3>
+          <p>Procesamiento en tiempo real sin esperas ni servidores externos</p>
         </div>
         <div class="feature_box">
           <div class="feature_icon">
-            <i class="fas fa-globe"></i>
+            <i class="fas fa-palette"></i>
           </div>
-          <h3>Multiplataforma</h3>
-          <p>Funciona en Windows, Mac, Linux y dispositivos móviles</p>
+          <h3>5 Temas Visuales</h3>
+          <p>Diseño moderno con temas dinámicos: Cielo, Dulce, Paz, Mora y Futuro</p>
         </div>
         <div class="feature_box">
           <div class="feature_icon">
-            <i class="fas fa-dollar-sign"></i>
+            <i class="fas fa-infinity"></i>
           </div>
           <h3>Totalmente Gratis</h3>
-          <p>Sin límites, sin anuncios molestos, sin costos ocultos</p>
-        </div>
-        <div class="feature_box">
-          <div class="feature_icon">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <h3>Fácil de Usar</h3>
-          <p>Interfaz intuitiva diseñada para usuarios de todos los niveles</p>
+          <p>Sin límites, sin anuncios, sin costos ocultos. Siempre gratis</p>
         </div>
       </div>
     </div>
@@ -99,14 +99,14 @@ export const render = () => `
       <div class="tech_grid">
         <div class="tech_card">
           <div class="tech_header">
-            <i class="fab fa-node-js"></i>
-            <h3>Backend</h3>
+            <i class="fas fa-microchip"></i>
+            <h3>OCR Engine</h3>
           </div>
           <ul class="tech_list">
-            <li><i class="fas fa-check"></i> Node.js v20.x</li>
-            <li><i class="fas fa-check"></i> Express.js</li>
-            <li><i class="fas fa-check"></i> FFmpeg 6.0</li>
-            <li><i class="fas fa-check"></i> Multer</li>
+            <li><i class="fas fa-check"></i> Tesseract.js 6.0</li>
+            <li><i class="fas fa-check"></i> Español + Inglés</li>
+            <li><i class="fas fa-check"></i> Drag & Drop</li>
+            <li><i class="fas fa-check"></i> Clipboard Paste</li>
           </ul>
         </div>
         <div class="tech_card">
@@ -116,21 +116,21 @@ export const render = () => `
           </div>
           <ul class="tech_list">
             <li><i class="fas fa-check"></i> Vanilla JavaScript</li>
-            <li><i class="fas fa-check"></i> jQuery 3.7</li>
-            <li><i class="fas fa-check"></i> CSS3 Moderno</li>
+            <li><i class="fas fa-check"></i> jQuery 3.7.1</li>
+            <li><i class="fas fa-check"></i> CSS3 Variables</li>
             <li><i class="fas fa-check"></i> Vite Build Tool</li>
           </ul>
         </div>
         <div class="tech_card">
           <div class="tech_header">
-            <i class="fas fa-server"></i>
-            <h3>Infraestructura</h3>
+            <i class="fas fa-database"></i>
+            <h3>Almacenamiento</h3>
           </div>
           <ul class="tech_list">
-            <li><i class="fas fa-check"></i> GitHub Pages</li>
-            <li><i class="fas fa-check"></i> CDN Global</li>
-            <li><i class="fas fa-check"></i> SSL/TLS</li>
-            <li><i class="fas fa-check"></i> Cache Optimizado</li>
+            <li><i class="fas fa-check"></i> LocalStorage</li>
+            <li><i class="fas fa-check"></i> Firebase (Opcional)</li>
+            <li><i class="fas fa-check"></i> Auto-expiración</li>
+            <li><i class="fas fa-check"></i> Sin rastreo</li>
           </ul>
         </div>
       </div>
@@ -142,16 +142,17 @@ export const render = () => `
       </h2>
       <div class="version_timeline">
         <div class="version_item">
-          <div class="version_badge current">v10</div>
+          <div class="version_badge current">${version}</div>
           <div class="version_content">
-            <h3>Versión 10.0 - Actualización Mayor</h3>
+            <h3>Versión ${version} - Actualización Mayor</h3>
             <p class="version_date"><i class="far fa-calendar"></i> Enero 2026</p>
             <ul>
-              <li>✨ Nueva interfaz moderna y minimalista</li>
-              <li>🚀 Conversión hasta 3x más rápida</li>
-              <li>🎨 Sistema de temas dinámicos</li>
-              <li>📊 Indicador de progreso en tiempo real</li>
-              <li>🔧 Mejoras en estabilidad y rendimiento</li>
+              <li>✨ Sistema de cuadre dual inteligente</li>
+              <li>🚀 OCR mejorado con Tesseract.js 6.0</li>
+              <li>🎨 5 temas dinámicos con transiciones suaves</li>
+              <li>📊 Tablas con scroll automático optimizado</li>
+              <li>🔧 Auto-detección de formatos (|, tab, números)</li>
+              <li>💾 Sistema de guardado local mejorado</li>
             </ul>
           </div>
         </div>
@@ -161,9 +162,10 @@ export const render = () => `
             <h3>Versión 9.0 - Optimización</h3>
             <p class="version_date"><i class="far fa-calendar"></i> Diciembre 2025</p>
             <ul>
-              <li>⚡ Optimización de carga inicial</li>
-              <li>📱 Mejoras en responsive design</li>
-              <li>🎯 Corrección de bugs menores</li>
+              <li>⚡ Mejora en rendimiento de OCR</li>
+              <li>📱 Diseño responsive optimizado</li>
+              <li>🎯 Corrección de bugs en cálculos</li>
+              <li>🌈 Mejora en sistema de temas</li>
             </ul>
           </div>
         </div>
@@ -174,10 +176,40 @@ export const render = () => `
             <p class="version_date"><i class="far fa-calendar"></i> ${lanzamiento}</p>
             <ul>
               <li>🎉 Lanzamiento oficial de ${app}</li>
-              <li>🎵 Conversión básica MP4 a MP3</li>
-              <li>📂 Sistema drag & drop</li>
+              <li>👁️ Sistema OCR básico</li>
+              <li>📊 Cuadre de cuentas simple</li>
+              <li>🎨 Primer sistema de temas</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acerca_section">
+      <h2 class="section_title">
+        <i class="fas fa-shield-check"></i> Privacidad y Seguridad
+      </h2>
+      <div class="privacy_content">
+        <div class="privacy_card">
+          <div class="privacy_icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>Procesamiento Local</h3>
+          <p>Todo el análisis de imágenes y cálculos se realizan en tu navegador. Nunca enviamos tus datos a servidores externos.</p>
+        </div>
+        <div class="privacy_card">
+          <div class="privacy_icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h3>Sin Rastreo</h3>
+          <p>No utilizamos cookies de seguimiento, análisis de terceros ni recopilamos información personal identificable.</p>
+        </div>
+        <div class="privacy_card">
+          <div class="privacy_icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>Control Total</h3>
+          <p>Tus datos se guardan en localStorage con expiración automática. Puedes borrarlos en cualquier momento.</p>
         </div>
       </div>
     </div>
@@ -194,9 +226,9 @@ export const render = () => `
           <h3>${autor}</h3>
           <p class="developer_role">Full Stack Developer & Creator</p>
           <p class="developer_bio">
-            Apasionado por crear herramientas útiles y accesibles para todos. 
-            Con más de 5 años de experiencia en desarrollo web y una visión clara: 
-            <strong>simplificar la tecnología</strong> para mejorar la vida de las personas.
+            Apasionado por crear herramientas útiles y accesibles que mejoren la productividad de las personas. 
+            Con experiencia en desarrollo web moderno y una filosofía clara: 
+            <strong>la tecnología debe simplificar, no complicar</strong>.
           </p>
           <div class="developer_links">
             <a href="${link}" target="_blank" class="dev_link">
@@ -216,7 +248,7 @@ export const render = () => `
     <div class="acerca_footer">
       <div class="footer_quote">
         <i class="fas fa-quote-left"></i>
-        <p>"La tecnología es mejor cuando acerca a las personas y simplifica sus vidas"</p>
+        <p>"Las mejores herramientas son aquellas que simplifican lo complejo y respetan tu privacidad"</p>
         <i class="fas fa-quote-right"></i>
       </div>
       <div class="footer_info">

@@ -21,7 +21,8 @@ export const header = (() => {
       <button class="wibtn_auth login"><i class="fas fa-sign-in-alt"></i><span>Login</span></button>
   `);
   }
-
+  window.addEventListener('wiFresh', (e) => cargandoPersonal(e.detail)); //Actualizar cambios en tiempo real
+  
   async function cargandoPersonal(wi) {
     personal(wi);
 //ACTUALIZAR CAMBIOS EN TIEMPO REAL

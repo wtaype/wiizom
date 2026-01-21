@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { Notificacion, wiPath, wiAnimate} from './widev.js';
+import { Notificacion, wiPath, wiAnimate} from './rutadev.js';
 
 let app = 'Wiizom';
 class WiRouter {
@@ -24,7 +24,7 @@ class WiRouter {
     if (normalizedPath === '/') normalizedPath = this.defaultRoute;
 
     let moduleLoader = this.ruta[normalizedPath];
-    if (!moduleLoader) moduleLoader = () => import('./web/404.js');
+    if (!moduleLoader) moduleLoader = () => import('../web/404.js');
 
     try {
       this.updateActiveNav(normalizedPath);

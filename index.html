@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/avif" href="/smile.avif" />
   <meta property="og:image" content="/smilebg.avif" />
-  <meta name="description" content="Wimp3 es una aplicación diseñada para realizar conversiones mucho más faciles." />
-  <link rel="canonical" href="https://wtaype.github.io/wimp3/" />
-  <title>Wimp3</title>
+  <meta name="description" content="Wiizom es una aplicación diseñada para realizar conversiones mucho más faciles." />
+  <link rel="canonical" href="https://wtaype.github.io/wiizom/" />
+  <title>Wiizom</title>
 <style>
 :root {
   --fz_s1: clamp(0.625rem, 0.8vh, 0.7rem);
@@ -175,6 +175,20 @@ a{text-decoration:none}
 .tema[data-ths^="Futuro"]{background:var(--Futuro)}
 #wiTema:hover{transform:translateY(-0.2vh);transition:var(--tr_m)}
 #wimain{flex:1;width:100%;padding:2vh 2vw;overflow-y:auto}
+.wibtn_auth{display:flex;align-items:center;gap:0.4vw;padding:0.8vh 1.2vw;background:var(--bg1);border:none;border-radius:0.8vh;color:var(--tx);font-size:var(--fz_m2);font-weight:500;cursor:pointer;transition:all var(--tr_f);}
+.wibtn_auth i{font-size:var(--fz_m3);}
+#wiTema:hover,.wibtn_auth:hover{transform:translateY(-0.2vh);transition:var(--tr_m);}
+.wibtn_auth:hover{background:var(--mco);color:var(--txa);border-color:var(--mco);box-shadow:0 0.4vh 1vh rgba(0,0,0,0.15);}
+.wiauth{display:flex;gap:.5vh;min-width:13.9vw;}
+.sesion img{max-width:3vh;}
+.sesion{height:4.5vh;display:flex;align-items:center;gap:.8vh;cursor:pointer;padding-inline:1.5vh;background:var(--bg1);border-radius:1.2vh;}
+.sesion:hover{transform:translateY(-.2vh);transition:var(--tr_s);}
+.sesion span,.bt_salir span,.bt_salir i{color:var(--tx);}
+.user-avatar{height:80%;box-shadow:var(--bs_m);border-radius:50%;}
+.bt_salir{background:var(--bg1);border-radius:1.2vh;border:none;padding-inline:2vh;cursor:pointer;}
+.bt_salir:hover{transform:translateY(-.2vh);transition:var(--tr_s);}
+.ski_auth{background:var(--bg1);width:100%;height:4.2vh;border-radius:.5vh;}
+.ski_inicio{background:var(--bg1);width:100%;height:92vh;border-radius:1vh;}
 /* ==================== FOOTER ==================== */
 .foo{width:100%;text-align:center;padding-block:1.5vh 1vh;background:var(--wb);border-radius:1vh 1vh 0 0}
 .foo *{font-size:var(--fz_s2);margin-inline:.3vh}
@@ -188,7 +202,6 @@ a{text-decoration:none}
 .dfcc{display:flex;justify-content:center;align-items:center;flex-direction:column;text-align:center}
 .mwb{max-width:87vw;margin:auto;width:100%}
 .wib{width:100%}
-
 /* ==================== RESPONSIVE ==================== */
 @media (max-width:768px){
 .wiheader{height:auto;flex-direction:column;padding:1.5vh 2vw;gap:1.5vh}
@@ -207,7 +220,7 @@ a{text-decoration:none}
   <div class="wicontainer">
     <header class="wiheader">
       <div class="wiheader_left">
-        <h1 class="wilogo"><a href="/"><i class="fas fa-clock"></i> Wimp3</a></h1>
+        <h1 class="wilogo"><a href="/"><i class="fas fa-clock"></i> Wiizoom</a></h1>
         <nav class="winav">
           <a href="/" class="winav_item active" data-page="inicio">
             <i class="fas fa-home"></i> <span>Inicio</span>
@@ -234,13 +247,13 @@ a{text-decoration:none}
           <div class="tema" data-ths="Mora|#7000FF"></div>
           <div class="tema" data-ths="Futuro|#21273B"></div>
         </div>
+        <a href="/smile" class="winav_item" data-page="smile">
+          <i class="fa-solid fa-gauge"></i> <span>Dashboard </span>
+        </a>
+        <div class="wiauth"><div class="ski_auth"></div></div> 
       </div> <!-- LADO DERECHO: Temas + Auth -->
     </header>
-    <main id="wimain"> 
-<!-- INICIO PAGE -->
-     <div class="inicio_container"><section class="hero"><div class="hero_content"><div class="hero_badge"><div class="badge_icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>La #1 en Conversión de Video</span></div><h1 class="hero_title">Convierte Videos a MP3 en<span class="gradient_text">Segundos</span></h1><p class="hero_subtitle">Rápido. Seguro. Ilimitado. Sin complicaciones.</p><div class="hero_actions"><a href="/convertidor" class="btn_primary"><svg viewBox="0 0 24 24" fill="none"><path d="M12.5 2C12.5 2 16.5 4.5 16.5 9.5C16.5 11.2 15.8 12.7 14.7 13.8L13.2 15.3C13.2 15.3 11 17.5 11 21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 13.5L4.5 16C3.5 17 3.5 18.5 4.5 19.5C5.5 20.5 7 20.5 8 19.5L10.5 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="14.5" cy="7.5" r="1.5" fill="currentColor"/></svg><span>Convertir Ahora</span></a><a href="/convertidor" class="btn_secondary"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14V19.14L19 12.14L8 5.14Z"/></svg><span>Ver Demo</span></a></div><div class="hero_stats"><div class="stat_mini"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>50K+ Conversiones</span></div><div class="stat_mini"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>10K+ Usuarios</span></div><div class="stat_mini"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>100% Gratis</span></div></div></div><div class="hero_visual"><div class="floating_card card_1"><div class="card_icon"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="card_text"><strong>3x</strong><span>Más Rápido</span></div></div><div class="floating_card card_2"><div class="card_icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="card_text"><strong>100%</strong><span>Seguro</span></div></div><div class="hero_circle"></div></div></section><section class="features"><div class="feature_item"><div class="feature_icon"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Ultra Rápido</h3><p>Conversión instantánea</p></div><div class="feature_item"><div class="feature_icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Privado</h3><p>Sin guardar archivos</p></div><div class="feature_item"><div class="feature_icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Calidad Pro</h3><p>Hasta 320 kbps</p></div></section><section class="cta"><div class="cta_content"><h2>¿Listo para la mejor experiencia?</h2><p>Únete a miles de usuarios que ya disfrutan de Wiimp3</p><a href="/convertidor" class="cta_btn"><svg viewBox="0 0 24 24" fill="none"><path d="M12.5 2C12.5 2 16.5 4.5 16.5 9.5C16.5 11.2 15.8 12.7 14.7 13.8L13.2 15.3C13.2 15.3 11 17.5 11 21.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7 13.5L4.5 16C3.5 17 3.5 18.5 4.5 19.5C5.5 20.5 7 20.5 8 19.5L10.5 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="14.5" cy="7.5" r="1.5" fill="currentColor"/></svg><span>Comenzar Gratis</span></a></div></section></div>
-<!-- FIN INICIO PAGE -->
-    </main>
+    <main id="wimain"><div class="ski_inicio"></div></main>
   </div>
 </body>
 <script>

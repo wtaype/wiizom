@@ -1,5 +1,6 @@
 import './auth/wiauth.js';
 import $ from 'jquery';
+import { rutas } from './rutas/ruta.js';
 import { getls, removels, Mensaje } from './widev.js';
 
 export function personal(wi) {
@@ -10,6 +11,7 @@ export function personal(wi) {
     </div>
     <button class="bt_salir"><i class="fas fa-sign-out-alt"></i> <span> Salir </span></button>
   `);
+  rutas.navigate('/smile');
 } // Funcion para Auth personal 
 
 export const header = (() => {
@@ -21,7 +23,6 @@ export const header = (() => {
       <button class="wibtn_auth login"><i class="fas fa-sign-in-alt"></i><span>Login</span></button>
   `);
   }
-  window.addEventListener('wiFresh', (e) => cargandoPersonal(e.detail)); //Actualizar cambios en tiempo real
   
   async function cargandoPersonal(wi) {
     personal(wi);
@@ -31,12 +32,14 @@ export const header = (() => {
       if (!user) return removels('wiSmile'), publico();
     });
   }
-    window.addEventListener('wiFresh', (e) => cargandoPersonal(e.detail));
+
+  window.addEventListener('wiFresh', (e) => cargandoPersonal(e.detail));
 //CERRAR SESSIÓN
   $(document).on('click', '.bt_salir', async () => {
     const { auth, signOut } = await import('./auth/wiauth.js');
-    await signOut(auth); location.reload();
-    removels('wiSmile wiFlags');
+    await signOut(auth);
+    ['wiflash', 'wiTema'].map(k => [k, getls(k)]).concat(localStorage.clear()) && localStorage.setItem('wiflash', JSON.stringify(getls('wiflash'))) && localStorage.setItem('wiTema', JSON.stringify(getls('wiTema')));
+    location.reload();
   });
 
 })();
